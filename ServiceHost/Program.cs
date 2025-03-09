@@ -1,5 +1,3 @@
-using ShopeManagementBootstraper.Configure;
-
 namespace ServiceHost
 {
     public class Program
@@ -11,11 +9,6 @@ namespace ServiceHost
             // Add services to the container.
             builder.Services.AddRazorPages();
 
-            //ConnectionString
-            string ConnectionString = builder.Configuration.GetConnectionString("SQLCONNCTION");
-
-            //Add Module
-            ShopeManagementBootstarper.Configure(builder.Services, ConnectionString);
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

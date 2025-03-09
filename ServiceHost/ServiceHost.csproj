@@ -6,12 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
-    <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
-    <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
-    <ProjectReference Include="..\ShopeManagementBootstraper\ShopeManagementBootstraper.Configure.csproj" />
-    <ProjectReference Include="..\ShopeManegement.Application\ShopeManegement.Application.csproj" />
-  </ItemGroup>
-
 </Project>
