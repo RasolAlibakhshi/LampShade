@@ -23,6 +23,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7012;http://localhost:5212",
+      "launchUrl": "https://localhost:7012/Adminstration/Shope/ProductCategory/Index",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
