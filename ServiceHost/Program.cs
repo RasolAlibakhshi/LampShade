@@ -1,3 +1,5 @@
+using ShopeManagementBootstraper.Configure;
+
 namespace ServiceHost
 {
     public class Program
@@ -8,9 +10,11 @@ namespace ServiceHost
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            ShopeManagementBootstarper.Configure(builder.Services, builder.Configuration.GetConnectionString("SQLCore"));
+
 
             var app = builder.Build();
-
+            
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

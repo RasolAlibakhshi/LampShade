@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeManegement.Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeManagementBootstraper.Configure", "ShopeManagementBootstraper\ShopeManagementBootstraper.Configure.csproj", "{3411C8DA-7B1C-4047-82EE-C5E85BB63F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{A0B7CB5E-B5FC-423A-96FC-1B7F55579402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{A0B7CB5E-B5FC-423A-96FC-1B7F55579402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
