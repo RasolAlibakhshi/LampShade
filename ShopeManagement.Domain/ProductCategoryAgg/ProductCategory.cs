@@ -17,6 +17,11 @@ namespace ShopeManagement.Domain.ProductCategoryAgg
         public string Slug { get; private set; }
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
+        public List<ProductAgg.Product> products { get; private set; }
+        public ProductCategory()
+        {
+            products=new List<ProductAgg.Product>();
+        }
 
         public ProductCategory(string name, string description, string picutre, string pictureAlt, string pictureTitle,string slug,string keywords,string metaDescription)
         {

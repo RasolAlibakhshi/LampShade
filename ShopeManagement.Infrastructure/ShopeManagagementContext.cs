@@ -10,6 +10,7 @@ namespace ShopeManagement.Infrastructure
 {
     public class ShopeManagagementContext:DbContext
     {
+        public DbSet<ShopeManagement.Domain.ProductAgg.Product> Products { get; set; }
         public DbSet<ShopeManagement.Domain.ProductCategoryAgg.ProductCategory> ProductCategories { get; set; }
         public ShopeManagagementContext(DbContextOptions<ShopeManagagementContext>Options):base(Options)
         {

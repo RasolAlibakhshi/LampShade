@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using ShopeManagement.Infrastructure.DTO;
 using ShopeManegement.Application.Execution.ProductCategory;
 using ShopeManagement.Infrastructure;
+using ShopeManegement.Application.Execution.Product;
+using ShopeManagement.Domain.ProductAgg;
 
 namespace ShopeManagementBootstraper.Configure
 {
@@ -18,7 +20,9 @@ namespace ShopeManagementBootstraper.Configure
             services
                 .AddTransient<IRepository<ShopeManagement.Domain.ProductCategoryAgg.ProductCategory>,
                     Repository<ShopeManagement.Domain.ProductCategoryAgg.ProductCategory>>();
+            services.AddTransient<IRepository<Product>,Repository<Product>>();
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+            services.AddTransient<IProductApplication,ProductApplication>();
             services.AddDbContext<ShopeManagagementContext>(x => x.UseSqlServer(connectionstring));
         }
     }
