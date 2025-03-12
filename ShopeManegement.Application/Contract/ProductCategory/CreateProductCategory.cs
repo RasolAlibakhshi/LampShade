@@ -16,5 +16,6 @@ namespace ShopeManegement.Application.Contract.ProductCategory
         public string Slug { get;  set; }
         public string Keywords { get;  set; }
         public string MetaDescription { get;  set; }
+        
     }
 }

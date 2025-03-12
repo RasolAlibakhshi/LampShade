@@ -1,8 +1,11 @@
-﻿using System;
+﻿
+using ShopeManegement.Application.Contract.ProductCategory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ShopeManegement.Application.Contract.Product
 {
@@ -21,6 +24,7 @@ namespace ShopeManegement.Application.Contract.Product
         public string Slug { get;  set; }
         public string Keywords { get;  set; }
         public string MetaDescription { get;  set; }
+        public List<SelectListProductCategory> Categories { get; set; }
     }
     
 

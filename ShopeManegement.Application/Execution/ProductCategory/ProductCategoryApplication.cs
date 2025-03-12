@@ -107,5 +107,13 @@ namespace ShopeManegement.Application.Execution.ProductCategory
             }
             return data.OrderByDescending(x=>x.ID).ToList();
         }
+
+        public List<SelectListProductCategory> selectList()
+        {
+            return _productCategoryAggRepository.GetAll().Select(x=>new SelectListProductCategory { 
+                ID = x.ID,
+                Name = x.Name
+            }).ToList();
+        }
     }
 }

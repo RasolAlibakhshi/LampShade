@@ -16,6 +16,6 @@ namespace ShopeManegement.Application.Execution.ProductCategory
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel Command);
         OpreationResult Remove(long id);
         OpreationResult Restore(long id);
-
-    }
+        List<SelectListProductCategory> selectList();
+   }
 }
