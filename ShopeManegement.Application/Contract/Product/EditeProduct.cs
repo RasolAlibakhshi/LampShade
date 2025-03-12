@@ -1,4 +1,6 @@
-﻿namespace ShopeManegement.Application.Contract.Product
+﻿using ShopeManegement.Application.Contract.ProductCategory;
+
+namespace ShopeManegement.Application.Contract.Product
 {
     public class EditeProduct:CreateProduct
     {

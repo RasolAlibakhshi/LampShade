@@ -1,7 +1,9 @@
 ﻿
+using _0_Framework.Application;
 using ShopeManegement.Application.Contract.ProductCategory;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +13,9 @@ namespace ShopeManegement.Application.Contract.Product
 {
     public class CreateProduct
     {
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Name { get;  set; }
-
+        [Range(0,int.MaxValue,ErrorMessage = ValidationMessages.MaxLenght)]
         public double UnitPrice { get;  set; }
         public string Code { get;  set; }
         public string ShortDescription { get;  set; }

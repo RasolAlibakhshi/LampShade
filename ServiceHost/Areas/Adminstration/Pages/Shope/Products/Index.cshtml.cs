@@ -41,7 +41,26 @@ namespace ServiceHost.Pages.Shope.Products
         public IActionResult OnGetEdit(long id) 
         {
             ShopeManagement.Domain.ProductAgg.Product data = _ProductApplication.Getdetails(id);
-            return Partial("./Edit", data);
+            data.Category = _ProductCategoryApplication.Getdetails(id);
+            var Edite = new EditeProduct
+            {
+                Name = data.Name,
+                Categories = _ProductCategoryApplication.selectList(),
+                Code = data.Code,
+                CategoryId = data.CategoryId,
+                Description = data.Description,
+                ID = data.ID,
+                PictureAlt = data.PictureAlt,
+                PictureTitle = data.PictureTitle,
+                Slug = data.Slug,
+                Keywords = data.Keywords,
+                MetaDescription = data.MetaDescription,
+                Picture = data.Picture,
+                ShortDescription = data.ShortDescription,
+                UnitPrice = data.UnitPrice
+
+            };
+            return Partial("./Edit", Edite);
         }
         public JsonResult OnPostEdit(EditeProduct command) 
         {

@@ -26,7 +26,7 @@ namespace ShopeManagement.Domain.ProductAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
 
-        public ProductCategory Category { get; private set; }
+        public ProductCategory Category { get; set; }
 
 
         public Product()
