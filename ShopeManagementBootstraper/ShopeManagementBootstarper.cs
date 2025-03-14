@@ -13,6 +13,10 @@ using ShopeManagement.Domain.ProductAgg;
 using ShopeManagement.Domain.SlideAgg;
 using ShopeManegement.Application.Execution.Slide;
 using ShopManagement.Application.Contracts.Slide;
+using _01_LampShadeQuery.Contratcts.Slide;
+using _01_LampShadeQuery.Query;
+using _01_LampShadeQuery.Contratcts.ProductCategory;
+
 
 namespace ShopeManagementBootstraper.Configure
 {
@@ -26,6 +30,10 @@ namespace ShopeManagementBootstraper.Configure
             services.AddTransient<IRepository<Product>,Repository<Product>>();
             services.AddTransient<IRepository<Slide>, Repository<Slide>>();
             services.AddTransient<ISlideApplication, SlideApplication>();
+
+            services.AddTransient<ISlideQuery, SlideQuery>();
+            services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
+
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddTransient<IProductApplication,ProductApplication>();
             services.AddDbContext<ShopeManagagementContext>(x => x.UseSqlServer(connectionstring));

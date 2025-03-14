@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Query\" />
+    <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+    <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
+    <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

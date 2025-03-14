@@ -56,6 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_LampShadeQuery\01_LampShadeQuery.csproj" />
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
     <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
