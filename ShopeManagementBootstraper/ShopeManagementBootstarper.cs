@@ -10,6 +10,9 @@ using ShopeManegement.Application.Execution.ProductCategory;
 using ShopeManagement.Infrastructure;
 using ShopeManegement.Application.Execution.Product;
 using ShopeManagement.Domain.ProductAgg;
+using ShopeManagement.Domain.SlideAgg;
+using ShopeManegement.Application.Execution.Slide;
+using ShopManagement.Application.Contracts.Slide;
 
 namespace ShopeManagementBootstraper.Configure
 {
@@ -21,6 +24,8 @@ namespace ShopeManagementBootstraper.Configure
                 .AddTransient<IRepository<ShopeManagement.Domain.ProductCategoryAgg.ProductCategory>,
                     Repository<ShopeManagement.Domain.ProductCategoryAgg.ProductCategory>>();
             services.AddTransient<IRepository<Product>,Repository<Product>>();
+            services.AddTransient<IRepository<Slide>, Repository<Slide>>();
+            services.AddTransient<ISlideApplication, SlideApplication>();
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddTransient<IProductApplication,ProductApplication>();
             services.AddDbContext<ShopeManagagementContext>(x => x.UseSqlServer(connectionstring));
