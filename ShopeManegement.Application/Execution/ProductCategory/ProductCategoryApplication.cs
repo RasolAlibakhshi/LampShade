@@ -99,7 +99,7 @@ namespace ShopeManegement.Application.Execution.ProductCategory
                     ID = x.ID,
                     Name = x.Name,
                     Picutre = x.Picutre,
-                    CreationDate = x.CreateDateTime.ToString()
+                    CreationDate = x.CreateDateTime.ToFarsi()
                 }).ToList();
             if (!string.IsNullOrWhiteSpace(Command.Name))
             {

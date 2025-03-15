@@ -58,6 +58,10 @@
   <ItemGroup>
     <ProjectReference Include="..\01_LampShadeQuery\01_LampShadeQuery.csproj" />
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+    <ProjectReference Include="..\DiscountManagement.Application\DiscountManagement.Application.csproj" />
+    <ProjectReference Include="..\DiscountManagement.Domain\DiscountManagement.Domain.csproj" />
+    <ProjectReference Include="..\DiscountManagement.Infrastructure\DiscountManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\DiscountManegement.Configuration\DiscountManegement.Configuration.csproj" />
     <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
     <ProjectReference Include="..\ShopeManagementBootstraper\ShopeManagementBootstraper.Configure.csproj" />

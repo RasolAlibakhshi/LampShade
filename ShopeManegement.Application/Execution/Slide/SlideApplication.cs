@@ -69,7 +69,7 @@ namespace ShopeManegement.Application.Execution.Slide
             return _slideRepository.GetAll().Select(x => new SlideViewModel
             {
                 Picture = x.Picture,
-                CreationDate = x.CreateDateTime.ToString(),
+                CreationDate = x.CreateDateTime.ToFarsi(),
                 Id = x.ID,
                 Heading = x.Heading,
                 Title = x.Title,

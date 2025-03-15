@@ -166,7 +166,7 @@ namespace ShopeManegement.Application.Execution.Product
                 UnitPrice = x.UnitPrice,
                 CategoryName = x.Category.Name,
                 CategoryId = x.CategoryId,
-                CreationDate=x.CreateDateTime.ToString(),
+                CreationDate=x.CreateDateTime.ToFarsi(),
                 Picture=x.Picture
             }).OrderByDescending(x=>x.ID).ToList();
         }

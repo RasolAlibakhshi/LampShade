@@ -1,3 +1,4 @@
+using DiscountManegement.Configuration;
 using ShopeManagementBootstraper.Configure;
 
 namespace ServiceHost
@@ -10,8 +11,9 @@ namespace ServiceHost
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            ShopeManagementBootstarper.Configure(builder.Services, builder.Configuration.GetConnectionString("SQLCore"));
-
+            string connectionstring = builder.Configuration.GetConnectionString("SQLCore");
+            ShopeManagementBootstarper.Configure(builder.Services, connectionstring);
+            DiscountManagementBootstraper.Configure(builder.Services, connectionstring);
 
             var app = builder.Build();
             
