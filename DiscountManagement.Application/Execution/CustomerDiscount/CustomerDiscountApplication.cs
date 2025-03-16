@@ -99,12 +99,12 @@ namespace DiscountManagement.Application.Execution.CustomerDiscount
                 query = query.Where(x => x.ProductID == Command.ProductID).ToList();
             }
 
-            if (Equals(!string.IsNullOrWhiteSpace(Command.StartDate)))
+            if (!string.IsNullOrWhiteSpace(Command.StartDate))
             {
 
                 query = query.Where(x => x.StartDate >=Command.StartDate.ToGeorgianDateTime()).ToList();
             }
-            if (Equals(!string.IsNullOrWhiteSpace(Command.EndDate)))
+            if (!string.IsNullOrWhiteSpace(Command.EndDate))
             {
 
                 query = query.Where(x => x.EndDate <=Command.EndDate.ToGeorgianDateTime()).ToList();

@@ -19,18 +19,18 @@ namespace ShopeManegement.Application.Execution.Product
         }
         public OpreationResult Create(CreateProduct Command)
         {
-            var opreation=new OpreationResult();
-            if (Command == null) 
+            var opreation = new OpreationResult();
+            if (Command == null)
             {
                 return opreation.Failed(ApplicationMessages.InputNull);
             }
-            else 
+            else
             {
-                if (_ProductApplication.Exite(x => x.Name == Command.Name)) 
+                if (_ProductApplication.Exite(x => x.Name == Command.Name))
                 {
                     return opreation.Failed(ApplicationMessages.DuplicatedRecord);
                 }
-                else 
+                else
                 {
                     _ProductApplication.Create(new ShopeManagement.Domain.ProductAgg.Product(Command.CategoryId, Command.Name, Command.UnitPrice
                         , Command.Code, Command.ShortDescription, Command.Description
@@ -49,15 +49,15 @@ namespace ShopeManegement.Application.Execution.Product
             {
                 return opreation.Failed(ApplicationMessages.InputNull);
             }
-            else 
+            else
             {
-                if(_ProductApplication.Exite(x=>x.ID == Command.ID)) 
+                if (_ProductApplication.Exite(x => x.ID == Command.ID))
                 {
-                    if (_ProductApplication.Exite(x=>x.Name==Command.Name && x.ID!=Command.ID))
+                    if (_ProductApplication.Exite(x => x.Name==Command.Name && x.ID!=Command.ID))
                     {
                         return opreation.Failed(ApplicationMessages.DuplicatedRecord);
                     }
-                    else 
+                    else
                     {
                         _ProductApplication.Getby(x => x.ID == Command.ID).Edite(Command.CategoryId, Command.Name, Command.UnitPrice
                         , Command.Code, Command.ShortDescription, Command.Description
@@ -67,7 +67,7 @@ namespace ShopeManegement.Application.Execution.Product
                         return opreation.Success();
                     }
                 }
-                else 
+                else
                 {
                     return opreation.Failed(ApplicationMessages.RecordNotFound);
                 }
@@ -76,7 +76,7 @@ namespace ShopeManegement.Application.Execution.Product
 
         public ShopeManagement.Domain.ProductAgg.Product Getdetails(long id)
         {
-            return _ProductApplication.Getby(x=>x.ID==id);
+            return _ProductApplication.Getby(x => x.ID==id);
         }
 
         public OpreationResult Instock(long id)
@@ -88,7 +88,7 @@ namespace ShopeManegement.Application.Execution.Product
                 _ProductApplication.SaveChange();
                 return opreation.Success();
             }
-            else 
+            else
             {
                 return opreation.Failed(ApplicationMessages.RecordNotFound);
             }
@@ -164,11 +164,11 @@ namespace ShopeManegement.Application.Execution.Product
                 Name = x.Name,
                 Code = x.Code,
                 UnitPrice = x.UnitPrice,
-                CategoryName = x.Category.Name,
+                CategoryName = x.Category?.Name ?? "",
                 CategoryId = x.CategoryId,
                 CreationDate=x.CreateDateTime.ToFarsi(),
                 Picture=x.Picture
-            }).OrderByDescending(x=>x.ID).ToList();
+            }).OrderByDescending(x => x.ID).ToList();
         }
 
     }

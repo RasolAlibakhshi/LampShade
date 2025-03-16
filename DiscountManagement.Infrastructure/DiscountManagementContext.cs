@@ -6,6 +6,7 @@ namespace DiscountManagement.Infrastructure
     public class DiscountManagementContext:DbContext
     {
         public DbSet<DiscountManagement.Domain.CustomerDiscountAgg.CustomerDiscount> CustomerDiscount { set; get; }
+        public DbSet<DiscountManagement.Domain.ColleagueDiscountAgg.ColleagueDiscount> ColleagueDiscount { set; get; }
         public DiscountManagementContext(DbContextOptions<DiscountManagementContext> options):base(options)
         {
             
