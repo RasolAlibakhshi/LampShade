@@ -13,7 +13,16 @@ namespace InventoryManagement.Infrastractuer.Mapping
     {
         public void Configure(EntityTypeBuilder<Inventory> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Inventory");
+            builder.HasKey(x => x.ID);
+
+
+            builder.OwnsMany(x => x.Operations, modelbuilder =>
+            {
+                modelbuilder.HasKey(x => x.ID);
+                modelbuilder.ToTable("InventoryOpreations");
+                modelbuilder.WithOwner(x => x.Inventory).HasForeignKey(x => x.InventoryID);
+            });
         }
     }
 }

@@ -26,7 +26,13 @@ namespace InventoryManagement.Domain.InventoryAgg
             IsDeleted=false;
         }
 
-        private long CalculateCurrentInventory()
+        public void Edit(long productId, double unitPrice)
+        {
+            ProductID = productId;
+            UnitPrice = unitPrice;
+        }
+
+        public long CalculateCurrentInventory()
         {
             var plus= Operations.Where(x=>x.OperationType==true).Sum(x=>x.Count);
             var minus= Operations.Where(x=>x.OperationType==false).Sum(x=>x.Count);

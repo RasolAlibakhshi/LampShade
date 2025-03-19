@@ -10,5 +10,6 @@ namespace InventoryManagement.Infrastractuer.DTO
 {
     public interface IRepositoryInventory<TEntity>:IRepository<TEntity> where TEntity : EntitiyBase
     {
+
     }
 }

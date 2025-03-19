@@ -14,6 +14,7 @@ namespace ServiceHost
             string connectionstring = builder.Configuration.GetConnectionString("SQLCore");
             ShopeManagementBootstarper.Configure(builder.Services, connectionstring);
             DiscountManagementBootstraper.Configure(builder.Services, connectionstring);
+            InventoryManagementBootstraper.Configure.InventoryManagementBootstraper.Cunfigure(builder.Services, connectionstring);
 
             var app = builder.Build();
             

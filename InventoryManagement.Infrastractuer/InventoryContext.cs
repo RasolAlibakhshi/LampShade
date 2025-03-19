@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InventoryManagement.Domain.InventoryAgg;
+using InventoryManagement.Infrastractuer.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace InventoryManagement.Infrastractuer
 {
-    public class InventoryManagementContext:DbContext
+    public class InventoryContext:DbContext
     {
         public DbSet<Inventory> Inventory { get; set; }
-        public InventoryManagementContext(DbContextOptions<InventoryManagementContext> options):base(options)
+        public InventoryContext(DbContextOptions<InventoryContext> options):base(options)
         {
             
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(InventoryMapping).Assembly);
         }
     }
 }

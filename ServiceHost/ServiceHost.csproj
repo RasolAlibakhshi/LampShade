@@ -62,6 +62,10 @@
     <ProjectReference Include="..\DiscountManagement.Domain\DiscountManagement.Domain.csproj" />
     <ProjectReference Include="..\DiscountManagement.Infrastructure\DiscountManagement.Infrastructure.csproj" />
     <ProjectReference Include="..\DiscountManegement.Configuration\DiscountManegement.Configuration.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Application\InventoryManagement.Application.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Domain\InventoryManagement.Domain.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Infrastractuer\InventoryManagement.Infrastractuer.csproj" />
+    <ProjectReference Include="..\InventoryManagementBootstraper.Configure\InventoryManagementBootstraper.Configure.csproj" />
     <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
     <ProjectReference Include="..\ShopeManagementBootstraper\ShopeManagementBootstraper.Configure.csproj" />

@@ -12,14 +12,15 @@ namespace InventoryManagement.Infrastractuer.DTO
 {
     public class InventoryRepository<TEntity> : IRepositoryInventory<TEntity> where TEntity : EntitiyBase
     {
-        private readonly InventoryManagementContext _context;
+        private readonly InventoryContext _context;
 
-        public InventoryRepository(InventoryManagementContext context)
+        public InventoryRepository(InventoryContext context)
         {
             _context = context;
         }
         public void Create(TEntity entity)
         {
+            
             _context.Set<TEntity>().Add(entity);
         }
 

@@ -17,6 +17,7 @@ namespace InventoryManagement.Application.Execution
         List<ViewModelInventory> Search(SearchModelInventory command);
         OpreationResult Increase(InceaseInventory command);
         OpreationResult Decrease(List<DecreaseInventory> command);
+        OpreationResult Decrease(DecreaseInventory command);
         Inventory GetBy(long id);
 
     }
