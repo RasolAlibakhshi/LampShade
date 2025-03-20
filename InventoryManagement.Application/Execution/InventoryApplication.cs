@@ -94,7 +94,25 @@ namespace InventoryManagement.Application.Execution
             return editinventory;
         }
 
-        public OpreationResult Increase(InceaseInventory command)
+        public List<InventoryOperationViewModel> GetOperationLog(long InventoryID)
+        {
+            var data = _inventoryRepository.Getby(x => x.ID == InventoryID);
+            return data.Operations.Select(x => new InventoryOperationViewModel
+            {
+                Count = x.Count,
+                CurrentCount = x.CurrentCount,
+                Description = x.Description,
+                ID = x.ID,
+                OrderID = x.OrderID,
+                OprationDateTime = x.OprationDateTime.ToFarsi(),
+                OperationType = x.OperationType,
+                OperatorID = x.OperatorID,
+                InventoryID = InventoryID,
+                OperatorName = "مدیر سیستم"
+            }).OrderByDescending(x=>x.ID).ToList();
+        }
+
+        public OpreationResult Increase(IncreaseInventory command)
         {
             var opreation = new OpreationResult();
             var data = _inventoryRepository.Getby(x => x.ID==command.InventoryID);
@@ -117,7 +135,7 @@ namespace InventoryManagement.Application.Execution
                 query = query.Where(x => x.ProductID == command.ProductID).ToList();
             }
 
-            if (!command.InStock)
+            if (command.InStock)
             {
                 query = query.Where(x => x.InStock == false).ToList();
             }

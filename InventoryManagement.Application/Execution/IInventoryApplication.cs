@@ -15,10 +15,11 @@ namespace InventoryManagement.Application.Execution
         OpreationResult Edit(EditInventory command);
         EditInventory GetDetails(long id);
         List<ViewModelInventory> Search(SearchModelInventory command);
-        OpreationResult Increase(InceaseInventory command);
+        OpreationResult Increase(IncreaseInventory command);
         OpreationResult Decrease(List<DecreaseInventory> command);
         OpreationResult Decrease(DecreaseInventory command);
         Inventory GetBy(long id);
+        List<InventoryOperationViewModel> GetOperationLog(long InventoryID);
 
     }
 }

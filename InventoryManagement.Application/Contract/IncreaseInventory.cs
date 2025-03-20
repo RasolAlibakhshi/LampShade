@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.Application.Contract
 {
-    public class InceaseInventory
+    public class IncreaseInventory
     {
         public long InventoryID { get; set; }
         public long Count { get; set; }
