@@ -9,5 +9,6 @@ namespace _01_LampShadeQuery.Contratcts.ProductCategory
     public interface IProductCategoryQuery
     {
         List<ProductCategoryQueryModel> GetProductCategories();
+        List<ProductCategoryQueryModel> GetProductCategoriesWhitProduct();
     }
 }

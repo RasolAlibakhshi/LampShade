@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+    <ProjectReference Include="..\DiscountManagement.Infrastructure\DiscountManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Infrastractuer\InventoryManagement.Infrastractuer.csproj" />
     <ProjectReference Include="..\ShopeManagement.Domain\ShopeManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopeManagement.Infrastructure\ShopeManagement.Infrastructure.csproj" />
   </ItemGroup>
